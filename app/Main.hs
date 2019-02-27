@@ -1,6 +1,6 @@
 module Main where
 
-import Lib
+import LZ77
 
 main :: IO ()
 main = putStrLn "Hello World"

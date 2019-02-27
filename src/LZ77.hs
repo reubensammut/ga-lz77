@@ -1,4 +1,4 @@
-module Lib
+module LZ77
     ( Instruction(..),
       Program(..),
       execute
