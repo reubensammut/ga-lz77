@@ -23,10 +23,17 @@ data State = State Inputs Outputs
 final :: State -> Bool
 final (State i _ ) = null i
 
+takeLast :: Int -> [a] -> [a]
+takeLast x ls = drop (length ls - x) ls
+
 step :: State -> State
-step s@(State i o) = case (head i) of
-  L x -> State (drop (fromIntegral x) (tail i)) (o ++ take (fromIntegral x) (tail i))
-  R x -> State (tail i) (o ++ drop (length o - (fromIntegral x)) o)
+step (State i o) = case (head i) of
+  L x -> let i' = drop (fromIntegral x) (tail i)
+             o' = take (fromIntegral x) (tail i)
+         in State i' (o ++ o')
+  R x -> let i' = tail i
+             o' = takeLast (fromIntegral x) o
+         in State i' (o ++ o')
 
 evalProg :: State -> State
 evalProg = until final step

@@ -1,10 +1,10 @@
 name:                ga-lz77
 version:             0.1.0.0
-github:              "githubuser/ga-lz77"
+github:              "reubensammut /ga-lz77"
 license:             BSD3
-author:              "Author name here"
-maintainer:          "example@example.com"
-copyright:           "2019 Author name here"
+author:              "Reuben Sammut"
+maintainer:          "reubensammut@gmail.com"
+copyright:           "2019 Reuben Sammut"
 
 extra-source-files:
 - README.md
@@ -17,7 +17,7 @@ extra-source-files:
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
 # common to point users to the README.md file.
-description:         Please see the README on GitHub at <https://github.com/githubuser/ga-lz77#readme>
+description:         Please see the README on GitHub at <https://github.com/reubensammut/ga-lz77#readme>
 
 dependencies:
 - base >= 4.7 && < 5
