@@ -42,6 +42,12 @@ type Outputs = [Instruction]
 newtype Program = Program { getProg :: [Instruction] }
   deriving (Eq, Show)
 
+instance GA Program where
+  genRandom = undefined
+  getFitness = undefined
+  mate = undefined
+  mutate = undefined
+
 data State = State Inputs Outputs
 
 final :: State -> Bool
